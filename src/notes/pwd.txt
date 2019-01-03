@@ -1,0 +1,16 @@
+Vaadin application:
+port: 8080
+
+openLDAP phpldapadmin:
+login: cn=admin,dc=example,dc=org
+password: admin
+port: 8081
+
+Database Postgres:
+login: postgres
+password: postgres
+port: 5433
+
+Test LDAP users:
+login: test Password: test
+login: nickita Password: 123456
