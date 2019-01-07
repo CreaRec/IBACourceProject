@@ -13,4 +13,3 @@ port: 5433
 
 Test LDAP users:
 login: test Password: test
-login: nickita Password: 123456
