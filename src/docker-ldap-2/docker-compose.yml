@@ -60,3 +60,11 @@ services:
       POSTGRES_PASSWORD: postgres
     ports:
       - 5433:5432
+
+  web:
+    image: tomcat:8.5
+    ports:
+      - 8080:8080
+    volumes:
+      - ./tomcat-files/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - ./tomcat-files/context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml

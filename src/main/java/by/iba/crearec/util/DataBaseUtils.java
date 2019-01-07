@@ -35,14 +35,16 @@ public class DataBaseUtils {
 		}
 	}
 
-	private static Connection getConnection() throws SQLException, ClassNotFoundException {
+	public static Connection getConnection() throws SQLException, ClassNotFoundException {
 		Class.forName("org.postgresql.Driver");
 		return DriverManager.getConnection(ProjectConstants.DATABASE_URL, ProjectConstants.DATABASE_USER, ProjectConstants.DATABASE_PASSWORD);
 	}
 
-	private static void closeConnection(Connection connection) {
+	public static void closeConnection(Connection connection) {
 		try {
-			connection.close();
+			if (connection != null) {
+				connection.close();
+			}
 		} catch (SQLException e) {
 			LOGGER.error("", e);
 		}

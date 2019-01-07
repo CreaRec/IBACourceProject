@@ -6,4 +6,5 @@
 
 	<!-- Should be only links to per-version cumulative changelog files. -->
 	<include file="v1.0/changelog-v1.0-cumulative.xml" relativeToChangelogFile="true"/>
+	<include file="default-values.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
