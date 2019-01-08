@@ -65,6 +65,10 @@ services:
     image: tomcat:8.5
     ports:
       - 8080:8080
+      - 8000:8000
+    command: catalina.sh jpda run
+    environment:
+      JPDA_OPTS: -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n
     volumes:
       - ./tomcat-files/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
       - ./tomcat-files/context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml
