@@ -11,7 +11,7 @@ public class ProjectConstants {
 	public static final String DATABASE_NAME = "postgres";
 	public static final String DATABASE_USER = "postgres";
 	public static final String DATABASE_PASSWORD = "postgres";
-	public static final String DATABASE_URL = "jdbc:postgresql://docker-ldap-2_db_1:5432/" + DATABASE_NAME;
+	public static final String DATABASE_URL = "jdbc:postgresql://postgres:5432/" + DATABASE_NAME;
 
 
 }
