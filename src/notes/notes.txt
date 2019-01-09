@@ -4,3 +4,9 @@
 2) Для настройки дебага через томкэт на докере выбрать Tomcat Remote.
 Во вкладке Server настроить на localhost:8080
 Во вкладке Startup/Connection настроить Debug на порт 8000
+
+3) Для тестирования rmi:
+Build common-module-1.0-SNAPSHOT.jar в другом проекте.
+Build rmi-learn-project.jar rmi server.
+Запустить команду для создания image из fat-jar: 'docker build -t rmilearnproject .'
+Запустить docker-compose up из общей директории.

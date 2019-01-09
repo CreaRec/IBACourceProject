@@ -12,4 +12,6 @@ public interface ICustomerService {
 
 	int getCountCustomers();
 
+	Customer addCustomer(Customer customer);
+
 }

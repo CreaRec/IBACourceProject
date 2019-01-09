@@ -31,8 +31,8 @@ public class PlutoniumPagination extends PolymerTemplate<PlutoniumPaginationMode
 	    System.out.println("34234234234");
     }
 
-	@EventHandler
-	private void onPageChange(int oldPage) {
-		System.out.println("111111111111");
-	}
+//	@EventHandler
+//	private void onPageChange(int oldPage) {
+//		System.out.println("111111111111");
+//	}
 }

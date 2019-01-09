@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer {
+public class Customer implements CustomerTO {
 	private String ssn;
-	private String name;
+	private String customerName;
 	private String address;
 }

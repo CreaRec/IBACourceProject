@@ -25,6 +25,10 @@ public class CustomerController {
 		return customerService.getCountCustomers();
 	}
 
+	public Customer addCustomer(Customer customer) {
+		return customerService.addCustomer(customer);
+	}
+
 //	public TestModel findById(String id) {
 //		return testModels.stream().filter(tm -> tm.getId().equals(id)).findFirst().orElse(null);
 //	}

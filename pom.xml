@@ -22,6 +22,11 @@
 			<id>vaadin-addons</id>
 			<url>http://maven.vaadin.com/vaadin-addons</url>
 		</repository>
+		<repository>
+			<id>in-project</id>
+			<name>In Project Repo</name>
+			<url>file://${project.basedir}/libs</url>
+		</repository>
 	</repositories>
 
     <dependencies>
@@ -106,6 +111,12 @@
 		    <groupId>org.slf4j</groupId>
 		    <artifactId>slf4j-log4j12</artifactId>
 		    <version>1.7.25</version>
+	    </dependency>
+
+	    <dependency>
+		    <groupId>common-module</groupId>
+		    <artifactId>common-module</artifactId>
+		    <version>1.0-SNAPSHOT</version>
 	    </dependency>
     </dependencies>
 
