@@ -8,5 +8,5 @@
 3) Для тестирования rmi:
 Build common-module-1.0-SNAPSHOT.jar в другом проекте.
 Build rmi-learn-project.jar rmi server.
-Запустить команду для создания image из fat-jar: 'docker build -t rmilearnproject .'
+Запустить команду для создания image из rmi-learn-project.jar: 'docker build -t rmilearnproject .'
 Запустить docker-compose up из общей директории.

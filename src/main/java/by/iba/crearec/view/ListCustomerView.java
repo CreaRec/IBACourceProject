@@ -39,7 +39,11 @@ public class ListCustomerView extends VerticalLayout {
 		Button buttonNew = new Button("New");
 		// Instantiate and edit new Customer the new button is clicked
 		buttonNew.addClickListener(e -> {
-			customerController.addCustomer(new Customer(UUID.randomUUID().toString().substring(0, 15), "123123", "13234234"));
+			Customer customer = customerController.addCustomer(new Customer(UUID.randomUUID().toString().substring(0, 15), "123123", "13234234"));
+			allCustomers.add(customer);
+			ListDataProvider<Customer> dataProviderNew = DataProvider.ofCollection(allCustomers);
+			dataProviderNew.setSortOrder(Customer::getCustomerName, SortDirection.ASCENDING);
+			grid.setDataProvider(dataProviderNew);
 		});
 
 		PlutoniumPagination plutoniumPagination = new PlutoniumPagination(5, customerController.getCountCustomers());

@@ -88,6 +88,9 @@ public class CustomerService implements ICustomerService {
 		Customer addedCustomer = null;
 		try {
 			addedCustomer = commandManager.startCommand(AddCustomerCommand.class, customer);
+			if (addedCustomer.getErrorMessage() != null && !addedCustomer.getErrorMessage().isEmpty()) {
+				throw new Exception(addedCustomer.getErrorMessage());
+			}
 		} catch (Exception e) {
 			LOGGER.error("", e);
 		}
