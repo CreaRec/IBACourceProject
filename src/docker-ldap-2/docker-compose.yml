@@ -78,5 +78,7 @@ services:
   rmi:
     image: rmilearnproject:latest
     container_name: rmi
+    depends_on:
+      - db
     ports:
       - 2005:2005
