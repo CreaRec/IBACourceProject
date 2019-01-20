@@ -1,0 +1,4 @@
+Extract here rmi-learn-project.zip
+
+./lib/<jars>
+./rmi-learn-project-1.0-SNAPSHOT.jar

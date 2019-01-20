@@ -27,13 +27,13 @@ public class GeneralView extends HorizontalLayout {
 
 	@PostConstruct
 	public void init() {
-		if (UI.getCurrent().getSession().getAttribute(ProjectConstants.LOGIN_SESSION_NAME) == null) {
-			loginForm.open();
-		} else {
+//		if (UI.getCurrent().getSession().getAttribute(ProjectConstants.LOGIN_SESSION_NAME) == null) {
+//			loginForm.open();
+//		} else {
 			logout.addClickListener(e -> logoutAction());
 
 			add(logout, listCustomerView.open());
-		}
+//		}
 	}
 
 	private void logoutAction() {
